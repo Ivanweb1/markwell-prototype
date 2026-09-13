@@ -1635,7 +1635,6 @@ summary:focus-visible, .text-link:focus-visible, .solid-link:focus-visible { out
 .support-prepare ol { display:grid; margin:22px 0 0; padding:0; list-style:none; border-top:1px solid rgba(26,67,107,.14); }
 .support-prepare li { display:grid; grid-template-columns:54px minmax(0,1fr); gap:16px; align-items:baseline; padding:15px 0; border-bottom:1px solid rgba(26,67,107,.14); font-size:clamp(15px,1.15vw,17px); line-height:1.35; }
 .support-prepare li span { color:rgba(26,67,107,.5); font-size:12px; letter-spacing:.08em; }
-.support-panel > .status-note { margin:22px 0 0; }
 
 .support-faq { display:grid; grid-template-columns:minmax(220px,.42fr) minmax(0,1.58fr); gap:clamp(40px,6vw,110px); align-items:start; margin-top:clamp(44px,5vw,76px); }
 .support-faq__nav { position:sticky; top:190px; display:grid; border-top:1px solid rgba(26,67,107,.22); }
