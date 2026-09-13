@@ -90,11 +90,3 @@ workVideos.forEach(current=>{
     if(event.key==='Enter'||event.key===' '){event.preventDefault();current.click();}
   });
 });
-const videoRail=document.querySelector('#real-work .tz-videos');
-document.querySelectorAll('[data-video-scroll]').forEach(button=>button.addEventListener('click',()=>{
-  if(!videoRail)return;
-  const card=videoRail.querySelector('.tz-video-item');
-  const gap=parseFloat(getComputedStyle(videoRail).columnGap)||0;
-  const distance=(card?.getBoundingClientRect().width||videoRail.clientWidth*.7)+gap;
-  videoRail.scrollBy({left:button.dataset.videoScroll==='next'?distance:-distance,behavior:'smooth'});
-}));

@@ -1165,52 +1165,16 @@ summary:focus-visible, .text-link:focus-visible, .solid-link:focus-visible { out
   margin: 0;
   color: #5f758b;
 }
-#real-work .tz-video-nav {
-  display: flex;
-  gap: 8px;
-  margin-top: 28px;
-}
-#real-work .tz-video-nav button {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  padding: 0;
-  place-items: center;
-  border: 1px solid rgba(26,67,107,.32);
-  border-radius: 50%;
-  color: var(--deep-ocean);
-  background: transparent;
-  cursor: pointer;
-  transition: color .2s ease, background .2s ease, transform .2s ease;
-}
-#real-work .tz-video-nav button:hover {
-  color: var(--cloud-white);
-  background: var(--deep-ocean);
-  transform: translateY(-2px);
-}
-#real-work .tz-video-nav button:focus-visible {
-  outline: 2px solid var(--clear-sky);
-  outline-offset: 3px;
-}
-#real-work .tz-video-nav svg { display: block; width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
 #real-work .tz-videos {
   display: grid;
-  grid-template-columns: none;
-  grid-auto-flow: column;
-  grid-auto-columns: clamp(185px, 17vw, 250px);
-  gap: clamp(12px, 1.4vw, 22px);
-  justify-content: start;
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(10px, 1.2vw, 22px);
 }
-#real-work .tz-video-item { position: relative; min-width: 0; margin: 0; scroll-snap-align: start; }
+#real-work .tz-video-item { position: relative; min-width: 0; margin: 0; }
 #real-work .tz-video-play { position: absolute; top: 50%; left: 50%; display: grid; width: clamp(54px, 4.4vw, 68px); height: clamp(54px, 4.4vw, 68px); place-items: center; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; color: #fff; background: rgba(12,43,74,.32); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transform: translate(-50%, -50%); pointer-events: none; transition: opacity .3s ease, transform .35s cubic-bezier(.22,1,.36,1), background-color .3s ease; }
 #real-work .tz-video-play svg { display: block; width: 40%; height: 40%; fill: currentColor; }
 #real-work .tz-video-item:hover .tz-video-play { background: rgba(12,43,74,.55); transform: translate(-50%, -50%) scale(1.06); }
 #real-work .tz-video-item.is-playing .tz-video-play { opacity: 0; transform: translate(-50%, -50%) scale(.85); }
-#real-work .tz-videos::-webkit-scrollbar { display: none; }
 #real-work .tz-videos video {
   display: block;
   width: 100%;
@@ -1386,7 +1350,7 @@ summary:focus-visible, .text-link:focus-visible, .solid-link:focus-visible { out
   .tz-technology__copy { gap:28px; margin-bottom:34px; }
   .tz-patent { row-gap:22px; }
   #filter .tz-split > .tz-media { order: 0; }
-  #real-work .tz-videos { display:flex; gap:15px; overflow-x:auto; scroll-snap-type:x mandatory; }
+  #real-work .tz-videos { display:flex; gap:15px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; }
   #real-work .tz-video-item,#real-work .tz-video-item:nth-child(n) { flex:0 0 min(66vw,280px); margin-top:0; scroll-snap-align:start; }
   #real-work .tz-videos video { height:auto; aspect-ratio:9/14; }
   #catalog .tz-products { display:flex; gap:10px; margin-right:calc(var(--edge) * -1); padding-right:var(--edge); overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; }
