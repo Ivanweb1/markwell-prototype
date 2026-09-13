@@ -43,6 +43,25 @@ tabs.forEach((tab, index) => {
   });
 });
 
+function openTabFor(id) {
+  const target = id ? document.getElementById(id) : null;
+  const panel = target?.closest('[role="tabpanel"]');
+  const tab = panel && tabs.find((item) => item.getAttribute('aria-controls') === panel.id);
+  if (!tab) return false;
+  activateTab(tab);
+  (target === panel ? tab.parentElement : target).scrollIntoView({ block: 'start' });
+  return true;
+}
+if (tabs.length) {
+  openTabFor(location.hash.slice(1));
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link || !openTabFor(link.getAttribute('href').slice(1))) return;
+    event.preventDefault();
+    history.replaceState(null, '', link.getAttribute('href'));
+  });
+}
+
 document.querySelectorAll('[data-pending-form]').forEach((form) => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
