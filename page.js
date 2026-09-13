@@ -1,3 +1,17 @@
+const tocLinks = [...document.querySelectorAll('.article-toc a[href^="#"]')];
+if (tocLinks.length) {
+  const sections = tocLinks.map((link) => document.getElementById(link.getAttribute('href').slice(1)));
+  const syncToc = () => {
+    let current = 0;
+    sections.forEach((section, index) => {
+      if (section.getBoundingClientRect().top < window.innerHeight * 0.35) current = index;
+    });
+    tocLinks.forEach((link, index) => link.setAttribute('aria-current', String(index === current)));
+  };
+  window.addEventListener('scroll', syncToc, { passive: true });
+  syncToc();
+}
+
 document.querySelectorAll('[data-menu-toggle]').forEach((button) => {
   button.addEventListener('click', () => {
     const nav = document.getElementById(button.getAttribute('aria-controls'));
