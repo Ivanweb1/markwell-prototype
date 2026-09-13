@@ -68,4 +68,25 @@ document.querySelectorAll('[data-product]').forEach(button=>button.addEventListe
   productDialog.showModal();
 }));
 document.querySelector('.dialog-close')?.addEventListener('click',()=>productDialog.close());
-document.querySelectorAll('.tz-videos video').forEach(current=>current.addEventListener('play',()=>document.querySelectorAll('.tz-videos video').forEach(other=>{if(other!==current)other.pause();})));
+const workVideos=[...document.querySelectorAll('.tz-videos video')];
+workVideos.forEach(current=>{
+  current.addEventListener('play',()=>{
+    workVideos.forEach(other=>{if(other!==current)other.pause();});
+    current.setAttribute('aria-label',current.getAttribute('aria-label').replace('Воспроизвести','Приостановить'));
+  });
+  current.addEventListener('pause',()=>{
+    current.setAttribute('aria-label',current.getAttribute('aria-label').replace('Приостановить','Воспроизвести'));
+  });
+  current.addEventListener('click',()=>current.paused?current.play():current.pause());
+  current.addEventListener('keydown',event=>{
+    if(event.key==='Enter'||event.key===' '){event.preventDefault();current.click();}
+  });
+});
+const videoRail=document.querySelector('#real-work .tz-videos');
+document.querySelectorAll('[data-video-scroll]').forEach(button=>button.addEventListener('click',()=>{
+  if(!videoRail)return;
+  const card=videoRail.querySelector('.tz-video-item');
+  const gap=parseFloat(getComputedStyle(videoRail).columnGap)||0;
+  const distance=(card?.getBoundingClientRect().width||videoRail.clientWidth*.7)+gap;
+  videoRail.scrollBy({left:button.dataset.videoScroll==='next'?distance:-distance,behavior:'smooth'});
+}));
