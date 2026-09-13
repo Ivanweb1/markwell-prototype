@@ -70,12 +70,20 @@ document.querySelectorAll('[data-product]').forEach(button=>button.addEventListe
 document.querySelector('.dialog-close')?.addEventListener('click',()=>productDialog.close());
 const workVideos=[...document.querySelectorAll('.tz-videos video')];
 workVideos.forEach(current=>{
+  const item=current.closest('.tz-video-item');
+  item?.insertAdjacentHTML('beforeend','<span class="tz-video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg></span>');
   current.addEventListener('play',()=>{
     workVideos.forEach(other=>{if(other!==current)other.pause();});
+    item?.classList.add('is-playing');
     current.setAttribute('aria-label',current.getAttribute('aria-label').replace('Воспроизвести','Приостановить'));
   });
   current.addEventListener('pause',()=>{
+    item?.classList.remove('is-playing');
     current.setAttribute('aria-label',current.getAttribute('aria-label').replace('Приостановить','Воспроизвести'));
+  });
+  current.addEventListener('ended',()=>{
+    current.currentTime=0;
+    item?.classList.remove('is-playing');
   });
   current.addEventListener('click',()=>current.paused?current.play():current.pause());
   current.addEventListener('keydown',event=>{
