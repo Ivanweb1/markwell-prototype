@@ -1,40 +1,38 @@
 <!doctype html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Контакты поддержки MarkWell и ответы на частые вопросы о работе, установке и обслуживании MW One."><title>Поддержка MarkWell</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=header-3"></head>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Контакты поддержки MarkWell и ответы на частые вопросы о работе, установке и обслуживании MW One."><title>Поддержка MarkWell</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=nojs-1"></head>
 <body class="page-body"><header class="site-header"><a class="brand" href="index.html"><img class="brand__logo" src="assets/markwell-logo-white.svg" alt="MarkWell"></a><button class="page-menu" data-menu-toggle aria-expanded="false" aria-controls="page-nav">Меню</button><nav class="site-nav" id="page-nav"><a href="catalog.html">Каталог</a><a href="company.html">О компании</a><a href="blog.html">Блог</a><a href="support.html" aria-current="page">Поддержка</a><a class="site-nav__cta" href="partners.html">Стать частью MarkWell</a></nav><div class="site-tools"><a href="catalog.html" aria-label="Поиск"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.8"/><path d="m15.5 15.5 5 5"/></svg><span>Поиск</span></a><a href="catalog.html" aria-label="Избранное"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 8.8c0 5-8.5 10.2-8.5 10.2S3.5 13.8 3.5 8.8A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 8.5 1.2Z"/></svg><span>Избранное</span></a><a href="support.html" aria-label="Войти"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.2" r="3.7"/><path d="M4.7 20c.7-4 3.1-6.2 7.3-6.2s6.6 2.2 7.3 6.2"/></svg><span>Войти</span></a><a href="catalog.html" aria-label="Корзина"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8.5h14l-1 12H6l-1-12Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg><span>Корзина</span></a></div></header>
 <main class="page-main">
 <section class="page-hero support-hero">
 <div><p class="page-kicker">Поддержка</p><h1>Поможем разобраться</h1></div>
 <div class="support-hero__aside">
 <p class="page-hero__intro">Настройка, обслуживание и гарантийные обращения по оборудованию MarkWell.</p>
-<a class="support-button" href="#contacts" data-support-chat>Написать в поддержку <span aria-hidden="true">↗</span></a>
+<div class="support-hero__actions">
+<a class="support-button" href="#contacts">Написать в поддержку <span aria-hidden="true">↓</span></a>
+<a class="support-hero__link" href="#faq">Частые вопросы <span aria-hidden="true">↓</span></a>
+</div>
 </div>
 </section>
 
 <section class="page-section support-section">
-<div class="support-tabs" role="tablist" aria-label="Разделы поддержки">
-<button type="button" role="tab" aria-selected="true" aria-controls="contacts" id="contacts-tab"><span>01</span>Контакты и поддержка</button>
-<button type="button" role="tab" aria-selected="false" aria-controls="faq" id="faq-tab" tabindex="-1"><span>02</span>FAQ</button>
-</div>
-
-<div class="support-panel" role="tabpanel" id="contacts" aria-labelledby="contacts-tab">
-<div class="support-head">
-<h2>Свяжитесь<br>удобным способом</h2>
-<p class="page-section__lead">Нужна помощь с оборудованием MarkWell или вопрос по эксплуатации? Свяжитесь с нашей службой поддержки удобным способом — мы поможем разобраться с настройкой, обслуживанием или гарантийным обращением.</p>
-</div>
+<div class="support-columns">
+<div class="support-col support-col--contacts" id="contacts">
+<div class="company-top"><p class="block-index"><span>01</span>Контакты и поддержка</p></div>
+<h2 class="support-col__title">Свяжитесь<br>удобным способом</h2>
+<p class="support-col__lead">Нужна помощь с оборудованием MarkWell или вопрос по эксплуатации? Свяжитесь с нашей службой поддержки удобным способом — мы поможем разобраться с настройкой, обслуживанием или гарантийным обращением.</p>
 
 <div class="support-contacts">
 <a class="support-contact" href="tel:88005518404"><span class="support-label">Телефон</span><strong>8 800 551 84 04</strong><span class="support-contact__action">Позвонить <span aria-hidden="true">↗</span></span></a>
 <a class="support-contact" href="mailto:info@mark-well.ru"><span class="support-label">Email</span><strong>info@mark-well.ru</strong><span class="support-contact__action">Написать письмо <span aria-hidden="true">↗</span></span></a>
-<a class="support-contact support-contact--deep" href="#contacts" data-support-chat><span class="support-label">Онлайн-поддержка</span><strong>Чат поддержки</strong><span class="support-contact__action">Написать в поддержку <span aria-hidden="true">↗</span></span></a>
+<a class="support-contact support-contact--deep" href="#contacts"><span class="support-label">Онлайн-поддержка</span><strong>Чат поддержки</strong><span class="support-contact__action">Написать в поддержку <span aria-hidden="true">↗</span></span></a>
 </div>
 
-<div class="support-details">
 <article class="support-hours">
 <span class="support-label">Часы работы</span>
 <p class="support-hours__days">Понедельник — пятница</p>
 <p class="support-hours__time">9:00–18:00</p>
 <p class="support-hours__note">Сообщение можно оставить в любое время. Если вы напишете вне часов работы, мы ответим после начала следующего рабочего дня.</p>
 </article>
+
 <article class="support-prepare">
 <span class="support-label">Чтобы мы помогли быстрее</span>
 <p>При обращении по техническому вопросу подготовьте:</p>
@@ -46,22 +44,11 @@
 </ol>
 </article>
 </div>
-</div>
 
-<div class="support-panel" role="tabpanel" id="faq" aria-labelledby="faq-tab" hidden>
-<div class="support-head">
-<h2>Частые<br>вопросы</h2>
-<p class="page-section__lead">Ответы на частые вопросы о работе, установке и обслуживании MarkWell MW One.</p>
-</div>
-
-<div class="support-faq">
-<nav class="support-faq__nav" aria-label="Категории вопросов">
-<a href="#faq-device"><span>01</span>Про устройство</a>
-<a href="#faq-install"><span>02</span>Про установку</a>
-<a href="#faq-filter"><span>03</span>Про фильтр</a>
-<a href="#faq-warranty"><span>04</span>Про покупку и гарантию</a>
-</nav>
-
+<div class="support-col support-col--faq" id="faq">
+<div class="company-top"><p class="block-index"><span>02</span>FAQ</p></div>
+<h2 class="support-col__title">Частые<br>вопросы</h2>
+<p class="support-col__lead">Ответы на частые вопросы о работе, установке и обслуживании MarkWell MW One.</p>
 <div class="support-faq__groups">
 <section class="faq-group" id="faq-device" aria-labelledby="faq-device-title">
 <header class="faq-group__head"><span>01</span><h3 id="faq-device-title">Про устройство</h3></header>
@@ -98,14 +85,9 @@
 <details><summary>Что делать, если возникла неисправность?</summary><div class="faq-answer"><p>Свяжитесь со службой поддержки MarkWell. Опишите проблему и при необходимости приложите фото или видео.</p><p>Специалисты проведут первичную диагностику и подскажут дальнейшие действия.</p><p>Если обращение связано с гарантией, может потребоваться подтверждение покупки.</p></div></details>
 <details><summary>Нужно ли самостоятельно отправлять устройство в сервис?</summary><div class="faq-answer"><p>Сначала обратитесь в поддержку MarkWell. После первичной диагностики специалист предложит подходящий вариант решения.</p></div></details>
 </section>
-
-<div class="support-final">
-<div><span class="support-label">Не нашли ответ?</span><p>Свяжитесь со службой поддержки MarkWell — мы поможем разобраться.</p></div>
-<a class="support-button" href="#contacts" data-support-chat>Написать в поддержку <span aria-hidden="true">↗</span></a>
-</div>
 </div>
 </div>
 </div>
 </section>
 </main>
-<footer class="site-footer"><div class="site-footer__grid"><a href="index.html"><img src="assets/markwell-logo-white.svg" alt="MarkWell"></a><nav><a href="catalog.html">Каталог</a><a href="company.html">О компании</a><a href="blog.html">Блог</a><a href="partners.html">Стать частью MarkWell</a></nav><div class="site-footer__contacts"><a href="tel:88005518404">8 800 551 84 04</a><a href="mailto:info@mark-well.ru">info@mark-well.ru</a><a href="legal.html">Юридические документы</a></div></div><div class="site-footer__bottom"><span>© MarkWell</span><a href="legal.html#privacy">Политика обработки персональных данных</a></div></footer><script src="page.js?v=4"></script></body></html>
+<footer class="site-footer"><div class="site-footer__grid"><a href="index.html"><img src="assets/markwell-logo-white.svg" alt="MarkWell"></a><nav><a href="catalog.html">Каталог</a><a href="company.html">О компании</a><a href="blog.html">Блог</a><a href="partners.html">Стать частью MarkWell</a></nav><div class="site-footer__contacts"><a href="tel:88005518404">8 800 551 84 04</a><a href="mailto:info@mark-well.ru">info@mark-well.ru</a><a href="legal.html">Юридические документы</a></div></div><div class="site-footer__bottom"><span>© MarkWell</span><a href="legal.html#privacy">Политика обработки персональных данных</a></div></footer><script src="page.js?v=5"></script></body></html>
