@@ -1207,7 +1207,7 @@ summary:focus-visible, .text-link:focus-visible, .solid-link:focus-visible { out
 }
 #real-work .tz-video-item { position: relative; min-width: 0; margin: 0; scroll-snap-align: start; }
 #real-work .tz-video-play { position: absolute; top: 50%; left: 50%; display: grid; width: clamp(54px, 4.4vw, 68px); height: clamp(54px, 4.4vw, 68px); place-items: center; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; color: #fff; background: rgba(12,43,74,.32); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transform: translate(-50%, -50%); pointer-events: none; transition: opacity .3s ease, transform .35s cubic-bezier(.22,1,.36,1), background-color .3s ease; }
-#real-work .tz-video-play svg { width: 40%; height: 40%; margin-left: 7%; fill: currentColor; }
+#real-work .tz-video-play svg { display: block; width: 40%; height: 40%; fill: currentColor; }
 #real-work .tz-video-item:hover .tz-video-play { background: rgba(12,43,74,.55); transform: translate(-50%, -50%) scale(1.06); }
 #real-work .tz-video-item.is-playing .tz-video-play { opacity: 0; transform: translate(-50%, -50%) scale(.85); }
 #real-work .tz-videos::-webkit-scrollbar { display: none; }

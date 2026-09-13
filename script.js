@@ -71,7 +71,7 @@ document.querySelector('.dialog-close')?.addEventListener('click',()=>productDia
 const workVideos=[...document.querySelectorAll('.tz-videos video')];
 workVideos.forEach(current=>{
   const item=current.closest('.tz-video-item');
-  item?.insertAdjacentHTML('beforeend','<span class="tz-video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg></span>');
+  item?.insertAdjacentHTML('beforeend','<span class="tz-video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.5 5v14l12-7z"/></svg></span>');
   current.addEventListener('play',()=>{
     workVideos.forEach(other=>{if(other!==current)other.pause();});
     item?.classList.add('is-playing');
