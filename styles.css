@@ -1078,11 +1078,17 @@ summary:focus-visible, .text-link:focus-visible, .solid-link:focus-visible { out
   color: #5f758b;
 }
 #real-work .tz-videos {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: clamp(10px, 1.2vw, 22px);
+  display: flex;
+  gap: clamp(12px, 1.4vw, 22px);
+  margin-right: calc(var(--edge) * -1);
+  padding-right: var(--edge);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
 }
-#real-work .tz-video-item { position: relative; min-width: 0; margin: 0; }
+#real-work .tz-videos::-webkit-scrollbar { display: none; }
+#real-work .tz-video-item { position: relative; min-width: 0; flex: 0 0 clamp(210px, 19vw, 280px); margin: 0; scroll-snap-align: start; }
 #real-work .tz-videos video {
   display: block;
   width: 100%;
@@ -1246,8 +1252,8 @@ summary:focus-visible, .text-link:focus-visible, .solid-link:focus-visible { out
   .tz-technology__copy { gap:28px; margin-bottom:34px; }
   .tz-patent { row-gap:22px; }
   #filter .tz-split > .tz-media { order: 0; }
-  #real-work .tz-videos { display:flex; gap:15px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; }
-  #real-work .tz-video-item,#real-work .tz-video-item:nth-child(n) { flex:0 0 min(66vw,280px); margin-top:0; scroll-snap-align:start; }
+  #real-work .tz-videos { gap:15px; }
+  #real-work .tz-video-item,#real-work .tz-video-item:nth-child(n) { flex:0 0 min(66vw,280px); margin-top:0; }
   #real-work .tz-videos video { height:auto; aspect-ratio:9/14; }
   #catalog .tz-products { display:flex; gap:10px; margin-right:calc(var(--edge) * -1); padding-right:var(--edge); overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; }
   #catalog .tz-products::-webkit-scrollbar { display:none; }
