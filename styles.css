@@ -1104,8 +1104,8 @@ summary:focus-visible, .text-link:focus-visible, .solid-link:focus-visible { out
 .tz-power .photo-placeholder small { color:rgba(225,237,244,.62); }
 .tz-power .photo-placeholder--wide { aspect-ratio:16/6; }
 .tz-power-layout > div:last-child { transform:translateY(clamp(-72px,-7svh,-40px)); }
-.tz-power-photo { margin:clamp(18px,2vw,30px) 0 0; }
-.tz-power-photo img { display:block; width:min(100%,clamp(220px,34svh,360px)); height:auto; }
+.tz-power-photo { display:grid; place-items:center; margin:clamp(18px,2vw,30px) 0 0; padding:clamp(24px,3.4svh,44px); background:var(--ice-cloud); }
+.tz-power-photo img { display:block; width:min(100%,clamp(200px,29svh,310px)); height:auto; }
 
 @media(max-width:900px) {
   .tz-power-layout { grid-template-columns:1fr; }
