@@ -1104,19 +1104,14 @@ summary:focus-visible, .text-link:focus-visible, .solid-link:focus-visible { out
 .tz-power .photo-placeholder small { color:rgba(225,237,244,.62); }
 .tz-power .photo-placeholder--wide { aspect-ratio:16/6; }
 .tz-power-layout > div:last-child { transform:translateY(clamp(-72px,-7svh,-40px)); }
-.tz-power-photo { position:relative; aspect-ratio:1.9/1; margin:clamp(18px,2vw,30px) 0 0; overflow:hidden; border:1px solid rgba(225,237,244,.3); background:linear-gradient(145deg,#f8fbfd 0%,#e5f1f7 100%); }
-.tz-power-photo img { position:absolute; top:50%; left:50%; display:block; width:min(68%,460px); height:auto; transform:translate(-50%,-56%); }
+.tz-power-photo { margin:clamp(18px,2vw,30px) 0 0; }
+.tz-power-photo img { display:block; width:min(100%,clamp(220px,34svh,360px)); height:auto; }
 
 @media(max-width:900px) {
   .tz-power-layout { grid-template-columns:1fr; }
   .tz-power-layout > div:last-child { transform:none; }
   .tz-power .photo-placeholder--wide { aspect-ratio:16/9; }
-  .tz-power-photo { aspect-ratio:16/9; }
-  .tz-power-photo img { width:min(82%,460px); }
-}
-
-@media(max-width:640px) {
-  .tz-power-photo { aspect-ratio:4/3; }
+  .tz-power-photo img { width:min(70%,300px); }
 }
 
 #control { padding-top:clamp(42px,4vw,64px); padding-bottom:clamp(58px,5.5vw,88px); background:var(--cloud-white); }
@@ -1229,10 +1224,10 @@ summary:focus-visible, .text-link:focus-visible, .solid-link:focus-visible { out
 #catalog .tz-product-media { width:100%; height:auto; aspect-ratio:1 / 1.06; overflow:hidden; background:#fff; }
 #catalog .tz-products img { display:block; width:100%; height:100%; aspect-ratio:auto; object-fit:cover; background:#fff; transition:transform .8s cubic-bezier(.22,1,.36,1); }
 #catalog .tz-products article:nth-child(1) img { object-fit:contain; transform:none; }
-#catalog .tz-products article:nth-child(2) img { transform:scale(1.27); transform-origin:center 48%; }
+#catalog .tz-products article:nth-child(2) img { object-fit:contain; transform:none; }
 #catalog .tz-products article:nth-child(3) img { object-fit:contain; transform:none; }
 #catalog .tz-products article:hover:nth-child(1) img { transform:none; }
-#catalog .tz-products article:hover:nth-child(2) img { transform:scale(1.31); }
+#catalog .tz-products article:hover:nth-child(2) img { transform:none; }
 #catalog .tz-products article:hover:nth-child(3) img { transform:none; }
 #catalog .tz-products h3,#catalog .tz-products p,#catalog .tz-products .text-link { margin-left:16px; margin-right:16px; }
 #catalog .tz-products h3 { margin-top:18px; margin-bottom:8px; font-size:clamp(21px,1.8vw,28px); line-height:1.05; }
