@@ -1169,7 +1169,7 @@ summary:focus-visible, .text-link:focus-visible, .solid-link:focus-visible { out
 #light .section-heading > p { max-width:470px; margin-bottom:5px; }
 #light .tz-light-grid { gap:clamp(6px,.7vw,12px); border:0; }
 #light .tz-light { display:block; overflow:hidden; border:0; background:#505254; }
-#light .tz-light img { width:100%; height:clamp(390px,32vw,560px); aspect-ratio:auto; object-fit:cover; object-position:center 36%; transition:transform .8s cubic-bezier(.22,1,.36,1); }
+#light .tz-light img { width:100%; height:auto; aspect-ratio:1 / 1; object-fit:cover; object-position:center 65%; transition:transform .8s cubic-bezier(.22,1,.36,1); }
 #light .tz-light:hover img { transform:scale(1.018); }
 #light .tz-light figcaption { min-height:0; padding:17px 18px 18px; background:var(--cloud-white); color:var(--deep-ocean); }
 #light .tz-light figcaption strong { font-size:clamp(28px,2.8vw,44px); font-weight:200; line-height:1; }
@@ -1261,7 +1261,7 @@ summary:focus-visible, .text-link:focus-visible, .solid-link:focus-visible { out
   #light .tz-light-grid { display:grid; grid-template-columns:82% 72% 72%; gap:10px; margin-right:calc(var(--edge) * -1); padding-right:var(--edge); overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; }
   #light .tz-light-grid::-webkit-scrollbar { display:none; }
   #light .tz-light { display:block; scroll-snap-align:start; }
-  #light .tz-light img { height:420px; }
+  #light .tz-light img { height:auto; }
   #audience > h2 { text-align:left; font-size:42px; }
   #audience .tz-audience { grid-template-columns:1fr; margin-top:36px; }
   #audience .tz-audience article { padding:25px 0 30px; }
@@ -1313,7 +1313,7 @@ summary:focus-visible, .text-link:focus-visible, .solid-link:focus-visible { out
   .tz-filter-sequence img { height:clamp(320px,52svh,500px); }
 
   #light .section-heading { margin-bottom:clamp(22px,3.2svh,36px); }
-  #light .tz-light img { height:clamp(290px,44svh,420px); }
+  #light .tz-light img { height:auto; }
   #light .tz-light figcaption { padding-top:14px; padding-bottom:15px; }
 
   .tz-bracket-gallery {
